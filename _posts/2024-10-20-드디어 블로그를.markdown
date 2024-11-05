@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "드디어 블로그를"
+title:  "[241020] 드디어 블로그를"
 date:   2024-10-20 00:04:07 +0900
 categories: memo
 ---

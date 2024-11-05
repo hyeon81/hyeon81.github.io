@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "10월 22일 화요일 - 세미나 들은 날"
+title:  "[241022] 세미나 들은 날"
 date:   2024-10-22 00:04:07 +0900
 categories: memo
 ---

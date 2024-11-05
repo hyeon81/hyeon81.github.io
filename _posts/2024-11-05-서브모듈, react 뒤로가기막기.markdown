@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "11월 5일 git submodule / react 뒤로가기 막기"
+title:  "[241105] git submodule / react 뒤로가기 막기"
 date:   2024-11-05 00:00:00 +0900
 categories: memo
 ---
