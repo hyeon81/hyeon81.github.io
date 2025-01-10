@@ -1,0 +1,38 @@
+---
+layout: post
+title: "[24.12.11] toFixed(), 좌우반전하기"
+date: 2024-12-11 00:00:00 +0900
+categories: memo
+---
+
+### 대체 왜 toFixed()는 string을 리턴하는가
+
+- https://stackoverflow.com/questions/2283566/how-can-i-round-a-number-in-javascript-tofixed-returns-a-string
+
+이 녀석 덕분에 타입을 바꾸는데 애를 좀 먹었다.
+
+stackoverflow를 읽어보니 number로 리턴할 경우 부동소수점을 사용하고 있는 js에서 소수점값을 제대로 표현하기 어렵기 때문에 string을 쓴다고만 봤는데… 부동소수점이 아직까지도 어려운 나에게는 다시 공부해야 할 영역일듯…
+
+https://stackoverflow.com/questions/2283566/how-can-i-round-a-number-in-javascript-tofixed-returns-a-string
+
+https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
+
+### 좌우반전 하기
+
+작업하다가 바 그래프를 좌우 반전으로 놓을 일이 있었는데 처음엔 transform을 사용했다.
+
+```css
+transform: scaleX(-1);
+```
+
+전달받은 값대로 x축으로 크기를 조정한다.
+
+-1를 넣으면 좌우반전이 된다
+
+https://developer.mozilla.org/ko/docs/Web/CSS/transform-function/scaleX
+
+```css
+justify-content: ${(props) => (props.isNegative ? `flex-end` : `flex-start`)}; //반대로 뒤집기
+```
+
+근데 이번 작업에서는 justify-content로 위치만 조정해주면 되는거라 이렇게 하긴 했다.

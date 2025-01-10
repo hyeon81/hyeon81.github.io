@@ -1,0 +1,58 @@
+---
+layout: post
+title: "[24.11.25] &gt; 타입 오류 등등"
+date: 2024-11-25 00:00:00 +0900
+categories: memo
+---
+
+- 태그 안에서 `>` 기호 사용 방법
+
+```jsx
+&gt;
+```
+
+- display flex하고 flex-direction을 row로 뒀을때 width를 100퍼센트로 만들지 않는방법
+- https://stackoverflow.com/questions/60514929/eslint-not-reporting-typescript-compiler-type-checking-errors
+  - 다른 사람들은 안뜨던 오류가 나에게 뜨는 이유?
+    **→ npm install 다시 함**
+- **타입 오류 원인과 해결 요약**
+
+1. **`Node.js` 및 `TypeScript` 버전 차이**
+   - **해결**: 프로젝트에 맞는 버전(`nvm use`, `npm install`) 사용.
+2. **의존성 충돌 (`node_modules`)**
+
+   - **해결**:
+
+     ```bash
+     rm -rf node_modules
+     npm ci
+
+     ```
+
+3. **`tsconfig.json` 설정 차이**
+   - **해결**: 팀원과 `tsconfig.json` 비교하여 설정 통일.
+4. **VSCode 환경 문제**
+   - **해결**:
+     - `TypeScript: Restart TS Server` 실행.
+     - VSCode 확장 프로그램 확인.
+5. **파일 동기화 문제**
+
+   - **해결**:
+
+     ```bash
+     git pull origin [브랜치명]
+
+     ```
+
+6. **로컬 캐시 문제**
+   - **해결**: 캐시 및 `dist` 삭제 후 재빌드.
+7. **타입 선언 파일 (`@types`) 누락**
+
+   - **해결**:
+
+     ```bash
+     npm install
+
+     ```
+
+환경을 통일하고 오류를 재확인하세요! 😊
